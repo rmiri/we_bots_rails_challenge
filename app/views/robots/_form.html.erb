@@ -1,0 +1,17 @@
+<% if flash[:errors] %>
+      <div style="color: red;">
+      <% flash[:errors].each do |message| %>
+          <p><%= message %></p>
+      <% end %>
+      </div>
+      <% end %>
+
+<%= form_for @robot do |robot| %>
+    <p><%= robot.label :name %></p>
+    <p><%= robot.text_field :name %></p>
+    <br />
+    <p><%= robot.label :ability_id %></p>
+    <p><%= robot.collection_select :ability_id, Ability.all, :id, :name %></p>
+    <br/>
+    <%= robot.submit %>
+<% end %>

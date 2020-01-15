@@ -1,0 +1,7 @@
+<h1>Robots Index </h1>
+<br/>
+<ul>
+<% @robots.each do |r| %>
+<li> <%= link_to r.name, r %> <%= link_to "Delete", r ,method: :delete %></li>
+   <% end %>
+   </ul>

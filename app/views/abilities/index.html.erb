@@ -1,0 +1,9 @@
+<h1>Abilities Index </h1>
+<ul>
+<% @abilities.each do |a| %>
+    <li> <%= link_to a.name, a %>
+        <ul><%= a.description %> </ul>
+    </li>
+    <br/>
+   <% end %>
+</ul>
